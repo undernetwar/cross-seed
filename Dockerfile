@@ -16,6 +16,6 @@ RUN crontab /etc/cron.d/cronsearch
 RUN touch /var/log/cron.log
 
 COPY init.sh /
-
+RUN chmod +x /init.sh
 EXPOSE 2468
 ENTRYPOINT ["/init.sh"]
